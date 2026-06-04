@@ -107,9 +107,9 @@ project-clarity/
 
 ---
 
-## ✅ JD Alignment
+## ✅ Project Manager Requirements
 
-| Requirement | How This Project Addresses It |
+| Requirement | How This Project Demonstrates It |
 |---|---|
 | *“Analyze current-state workflows and identify opportunities for efficiency gains”* | 14-step current-state map with time-on-task data and Lean waste classification |
 | *“Design and implement optimized workflows that improve scalability and user experience”* | Future-state SOP with 43% step reduction, EMR-neutral design, and embedded decision logic |
