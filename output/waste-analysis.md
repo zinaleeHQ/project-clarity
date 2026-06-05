@@ -10,22 +10,22 @@
 
 | Step | Action Summary | Primary Waste | Secondary Waste | Eliminatable? |
 |---|---|---|---|---|
-| 01 | Commure flags case for manual review | Required NVA | — | No |
-| 02 | Clinician receives notification | Required NVA | — | No |
-| **03** | Navigate to Commure manual review queue | **Motion** | Transportation | **Yes** |
-| 04 | Review AI-generated clinical summary | Value-Added | — | No |
+| 01 | RCM platform flags case for manual review | Required NVA | â | No |
+| 02 | Clinician receives notification | Required NVA | â | No |
+| **03** | Navigate to RCM platform manual review queue | **Motion** | Transportation | **Yes** |
+| 04 | Review AI-generated clinical summary | Value-Added | â | No |
 | **05** | Navigate to separate screen for modifier lookup | **Waiting** | Motion | **Yes** |
-| 06 | Enter modifier code in Commure | Required NVA | — | Redesign |
+| 06 | Enter modifier code in RCM platform | Required NVA | â | Redesign |
 | **07** | Navigate back to EMR for secondary diagnosis verification | **Motion** | Transportation | **Yes** |
-| 08 | Confirm/correct secondary diagnosis in Commure | Value-Added | — | No |
-| 09 | Submit charge in Commure | Value-Added | — | No |
+| 08 | Confirm/correct secondary diagnosis in RCM platform | Value-Added | â | No |
+| 09 | Submit charge in RCM platform | Value-Added | â | No |
 | **10** | Duplicate charge log in hospital EMR | **Extra Processing** | Non-Utilized Talent | **Yes** |
 | **11** | Free-text documentation in notes field | **Defects** | Extra Processing | Redesign |
 | **12** | Billing coordinator manually checks modifier | **Defects prevention** | Inventory | **Yes** |
 | **13** | Billing contacts clinician for rework (22% of cases) | **Defects** | Waiting | **Yes** |
-| 14 | Charge queued for claim submission | Required NVA | — | No |
+| 14 | Charge queued for claim submission | Required NVA | â | No |
 
-**Pure waste steps (eliminatable): 03, 05, 07, 10, 12, 13 — 6 of 14 steps = 43% of workflow**
+**Pure waste steps (eliminatable): 03, 05, 07, 10, 12, 13 â 6 of 14 steps = 43% of workflow**
 
 ---
 
@@ -37,9 +37,9 @@
 | 2 | **Motion** | 2.7 min/case | 1, 3, 5 | 03, 05, 07 |
 | 3 | **Extra Processing** | 0.8 min/case | 1, 2, 4, 5 | 10, 11 |
 | 4 | **Defects** | 1.8 min/case (when triggered) | 1, 2, 3, 4 | 11, 13 |
-| 5 | **Non-Utilized Talent** | Difficult to quantify — highest cost per minute | 2, 3, 4, 5 | 03, 05, 10 |
+| 5 | **Non-Utilized Talent** | Difficult to quantify â highest cost per minute | 2, 3, 4, 5 | 03, 05, 10 |
 
-> **Note on Non-Utilized Talent:** This waste type cannot be fully quantified in minutes-per-case because its primary cost is opportunity cost — physician cognitive bandwidth diverted from clinical decision-making to administrative navigation. At $300–$500/hr effective clinician time, even small reductions in NUT waste generate significant value.
+> **Note on Non-Utilized Talent:** This waste type cannot be fully quantified in minutes-per-case because its primary cost is opportunity cost â physician cognitive bandwidth diverted from clinical decision-making to administrative navigation. At $300â$500/hr effective clinician time, even small reductions in NUT waste generate significant value.
 
 ---
 
@@ -47,24 +47,24 @@
 
 | Waste Type | Surface Symptom | Root Cause | In Scope? |
 |---|---|---|---|
-| Waiting | Clinician searches externally for modifier code | Commure does not display modifier suggestions in the review screen | Yes — display layer change |
-| Motion | 3 system transitions per case | Commure review screen does not surface secondary diagnosis data inline | Yes — display layer change |
-| Extra Processing | Duplicate EMR charge entry at 60% of sites | No API-level charge confirmation sent to EMR — clinician manually confirms | Partial — requires site-level config |
-| Defects | 22% modifier error rate | No structured decision record — free-text notes unchecked until billing review | Yes — replace free-text with structured field |
-| Non-Utilized Talent | Skilled clinicians doing administrative navigation | Workflow designed for system convenience, not user efficiency | Yes — redesign |
+| Waiting | Clinician searches externally for modifier code | RCM platform does not display modifier suggestions in the review screen | Yes â display layer change |
+| Motion | 3 system transitions per case | RCM platform review screen does not surface secondary diagnosis data inline | Yes â display layer change |
+| Extra Processing | Duplicate EMR charge entry at 60% of sites | No API-level charge confirmation sent to EMR â clinician manually confirms | Partial â requires site-level config |
+| Defects | 22% modifier error rate | No structured decision record â free-text notes unchecked until billing review | Yes â replace free-text with structured field |
+| Non-Utilized Talent | Skilled clinicians doing administrative navigation | Workflow designed for system convenience, not user efficiency | Yes â redesign |
 
 ### High-Leverage Intervention Points
 
 Two root causes each drive multiple waste types:
 
-**1. Absence of inline modifier and diagnosis data in Commure review screen**
-→ Drives Waiting (external lookup) + Motion (screen navigation) + Non-Utilized Talent (low-value task)
-→ Single display-layer change eliminates all three waste types simultaneously
+**1. Absence of inline modifier and diagnosis data in RCM platform review screen**
+â Drives Waiting (external lookup) + Motion (screen navigation) + Non-Utilized Talent (low-value task)
+â Single display-layer change eliminates all three waste types simultaneously
 
 **2. Absence of structured documentation field**
-→ Drives Defects (incorrect/incomplete modifier documentation) + Extra Processing (free-text that billing must interpret manually)
-→ Replacing free-text with a structured confirmation field eliminates both
+â Drives Defects (incorrect/incomplete modifier documentation) + Extra Processing (free-text that billing must interpret manually)
+â Replacing free-text with a structured confirmation field eliminates both
 
 ---
 
-*Output generated from process analysis prompt v1.0 · See [value-stream-map.md](./value-stream-map.md) for the before/after workflow comparison*
+*Output generated from process analysis prompt v1.0 Â· See [value-stream-map.md](./value-stream-map.md) for the before/after workflow comparison*
