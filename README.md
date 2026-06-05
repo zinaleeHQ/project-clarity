@@ -1,4 +1,9 @@
 # 🔶 Project Clarity: Clinical Workflow Optimization Blueprint
+> **What this project is about, in plain language:**
+>
+> This project standardizes a workflow that 2,000+ clinicians were doing differently at every site — some well, most inconsistently, none documented. An AI tool analyzed the friction, classified the waste, and generated a future-state procedure. The PM's job is to recognize that a technically correct procedure doesn't deploy itself — and to define the three actions required to actually get 2,000 skeptical, experienced clinicians to use it.
+
+
 
 > **Standardizing AI-Assisted Charge Entry Across a Distributed Healthcare Workforce**
 
