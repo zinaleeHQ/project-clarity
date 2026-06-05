@@ -130,6 +130,7 @@ I have built a constraint into the prompt that prevents the AI from proposing a 
 | [Project Horizon](https://github.com/zinaleeHQ/project-horizon) | What do we build and when? | SAFe · WSJF |
 | **Project Clarity** (this repo) | How do we change how people work? | Lean · DMAIC |
 | [Project Signal](https://github.com/zinaleeHQ/project-signal) | How do we keep every stakeholder aligned? | Stakeholder Intelligence · Audience Mapping |
+| [Project Vista](https://github.com/zinaleeHQ/project-vista) | How do we give every stakeholder self-service visibility? | KPI Governance · Data Architecture |
 
 [**← Back to Portfolio Overview**](https://github.com/zinaleeHQ)
 
