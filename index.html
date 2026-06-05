@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Clarity — Run the Prompt</title>
+  <style>
+    :root {
+      --teal: #0d7377;
+      --teal-dark: #0a5c5f;
+      --teal-light: #e8f5f5;
+      --slate: #2d3748;
+      --gray: #718096;
+      --border: #cbd5e0;
+      --white: #ffffff;
+      --success: #276749;
+      --success-bg: #c6f6d5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f7fafc;
+      color: var(--slate);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .header {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: var(--white);
+      padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 5vw, 2rem);
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .header p {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      opacity: 0.88;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .main { max-width: 780px; margin: 0 auto; padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem); }
+    .card {
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: clamp(1.2rem, 3vw, 2rem);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .card h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--teal-dark); }
+    .plain-lang {
+      background: var(--teal-light);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.2rem;
+      font-size: 0.97rem;
+      color: var(--slate);
+      line-height: 1.65;
+    }
+    .copy-area { text-align: center; padding: 0.5rem 0; }
+    .copy-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 0.85rem 2.5rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.01em;
+    }
+    .copy-btn:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .copy-btn:active { transform: translateY(0); }
+    .copy-btn.copied { background: var(--success); }
+    .status-msg {
+      font-size: 0.85rem;
+      color: var(--gray);
+      min-height: 1.2em;
+    }
+    .status-msg.ok { color: var(--success); }
+    .status-msg.err { color: #c53030; }
+    .steps-list { list-style: none; counter-reset: steps; }
+    .steps-list li {
+      counter-increment: steps;
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+    }
+    .steps-list li::before {
+      content: counter(steps);
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 520px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-item { font-size: 0.88rem; }
+    .about-item strong { display: block; color: var(--teal-dark); margin-bottom: 2px; }
+    .footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--gray);
+      padding: 1.5rem 1rem 2.5rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+    .footer a { color: var(--teal); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .pill {
+      display: inline-block;
+      background: #edf2f7;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">🔶 PM Portfolio · Project Clarity</div>
+  <h1>Clinical Workflow Optimization</h1>
+  <p>AI-Assisted Lean DMAI C Analysis — One-Click Prompt Copy</p>
+</div>
+
+<div class="main">
+
+  <div class="card">
+    <h2>What This Project Does</h2>
+    <div class="plain-lang">
+      This project standardizes a workflow that 2,000+ clinicians were doing differently at every site — some well, most inconsistently, none documented. An AI tool analyzed the friction, classified the waste, and generated a future-state procedure. The PM's job is to recognize that a technically correct procedure doesn't deploy itself — and to define the three actions required to actually get 2,000 skeptical, experienced clinicians to use it.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="copy-area">
+      <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">
+        📋 Copy Full Prompt to Clipboard
+      </button>
+      <br />
+      <span class="status-msg" id="statusMsg">Loading prompt...</span>
+    </div>
+    <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border);" />
+    <p style="font-size:0.88rem; color:var(--gray);">
+      <strong>What's included:</strong> The full Lean DMAI C prompt + current-state workflow data (14 steps, time-on-task) + clinician friction inventory (5 archetypes) + process constraint matrix (8 guardrails) — all embedded. No file uploads needed.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>What to Do After Copying</h2>
+    <ol class="steps-list">
+      <li>Open any capable AI assistant (Claude, ChatGPT, or Gemini).</li>
+      <li>Paste the prompt and press send. The AI will run <span class="pill">Phase 1</span> (Waste Classification) and <span class="pill">Phase 2</span> (Root Cause Analysis) automatically.</li>
+      <li>After Phase 2, the AI pauses and asks permission to continue. <strong>This is your evaluation checkpoint.</strong> Review the waste analysis — does the AI's diagnosis match your read of the data?</li>
+      <li>Approve to proceed. The AI runs <span class="pill">Phase 3</span> (Future-State Design) and <span class="pill">Phase 4</span> (SOP Generation).</li>
+      <li>Review the output SOP as if you're Archetype 5 (the skeptical 18-year veteran). Would they actually use this? That's the real test.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>About This Project</h2>
+    <div class="about-grid">
+      <div class="about-item">
+        <strong>Framework</strong>
+        Lean DMAI C · 8 Wastes Classification
+      </div>
+      <div class="about-item">
+        <strong>Domain</strong>
+        Healthcare IT · Revenue Cycle Management
+      </div>
+      <div class="about-item">
+        <strong>Scale</strong>
+        2,000+ clinicians · 200+ partner sites
+      </div>
+      <div class="about-item">
+        <strong>Portfolio Role</strong>
+        Project 2 of 4 — process change after prioritization
+      </div>
+    </div>
+    <div style="margin-top:1rem; font-size:0.88rem; color:var(--gray);">
+      Read the full PM decision log in <a href="https://github.com/zinaleeHQ/project-clarity/blob/main/PROCESS.md" target="_blank">PROCESS.md</a> or browse the <a href="https://github.com/zinaleeHQ/project-clarity" target="_blank">full repository</a>.
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <a href="https://github.com/zinaleeHQ">← Back to Portfolio</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/zinaleeHQ/project-clarity">View Repository</a>
+  &nbsp;·&nbsp;
+  Portfolio simulation · All scenario details constructed from publicly available information
+</div>
+
+<script>
+  const RAW_URL = 'https://raw.githubusercontent.com/zinaleeHQ/project-clarity/main/run-this-prompt.md';
+  let promptText = null;
+
+  fetch(RAW_URL)
+    .then(r => { if (!r.ok) throw new Error('fetch failed'); return r.text(); })
+    .then(text => {
+      promptText = text;
+      document.getElementById('statusMsg').textContent = '✓ Prompt loaded and ready to copy';
+      document.getElementById('statusMsg').className = 'status-msg ok';
+    })
+    .catch(() => {
+      document.getElementById('statusMsg').textContent = 'Could not pre-load prompt. It will be fetched when you click copy.';
+      document.getElementById('statusMsg').className = 'status-msg err';
+    });
+
+  async function copyPrompt() {
+    const btn = document.getElementById('copyBtn');
+    const msg = document.getElementById('statusMsg');
+
+    if (!promptText) {
+      msg.textContent = 'Fetching prompt...';
+      msg.className = 'status-msg';
+      try {
+        const r = await fetch(RAW_URL);
+        if (!r.ok) throw new Error('fetch failed');
+        promptText = await r.text();
+      } catch(e) {
+        msg.textContent = '⚠ Could not load prompt. Try refreshing the page.';
+        msg.className = 'status-msg err';
+        return;
+      }
+    }
+
+    try {
+      await navigator.clipboard.writeText(promptText);
+    } catch(e) {
+      const ta = document.createElement('textarea');
+      ta.value = promptText;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+
+    btn.textContent = '✓ Copied!';
+    btn.className = 'copy-btn copied';
+    msg.textContent = 'Prompt copied to clipboard — paste it into your AI assistant now.';
+    msg.className = 'status-msg ok';
+
+    setTimeout(() => {
+      btn.textContent = '📋 Copy Full Prompt to Clipboard';
+      btn.className = 'copy-btn';
+      msg.textContent = '✓ Prompt loaded and ready to copy';
+      msg.className = 'status-msg ok';
+    }, 4000);
+  }
+</script>
+
+</body>
+</html>
