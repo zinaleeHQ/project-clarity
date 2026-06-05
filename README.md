@@ -119,6 +119,10 @@ project-clarity/
 
 ---
 
+## ✅ Project Manager Methodology Intervention
+
+I have built a constraint into the prompt that prevents the AI from proposing a future state until the waste analysis is complete. I have designed a guardrail into the system: the AI can't skip the diagnostic step because the methodology requires diagnosis before solution.
+
 ## 🔗 Portfolio Navigation
 
 | Project | Question Answered | Methodology |
