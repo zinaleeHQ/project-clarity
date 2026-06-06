@@ -128,6 +128,18 @@ project-clarity/
 
 I have built a constraint/guardrail into the prompt that prevents the AI from proposing a future state until the waste analysis is complete: the AI can't skip the diagnostic step because the methodology requires diagnosis before solution.
 
+---
+
+## 🚀 Want to Try This Yourself?
+
+This project has a live HTML page with a one-click **Copy Prompt** button that copies the complete prompt for you, including data. Paste/Ctrl-V into Claude, GPT-4, or Gemini — no setup required.
+
+👉 [Open Project Clarity](https://zinaleeHQ.github.io/project-clarity/)
+
+Each prompt pauses at a PM judgment checkpoint before the final phase. Answer "yes" when you are ready to move forward. (That pause is the point.)
+
+---
+
 ## 🔗 Portfolio Navigation
 
 | Project | Question Answered | Methodology |
