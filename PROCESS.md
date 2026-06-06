@@ -1,6 +1,6 @@
-# PROCESS.md — How I Built This Project
+# The PROCESS — How I Built This Project
 
-*By Zina Lee, Product Manager*
+*Zina Lee, Product Manager*
 
 ---
 
@@ -77,7 +77,7 @@ Three implementation problems the output doesn't address:
 
 **The embedded modifier reference panel requires a vendor product change.** The single highest-leverage fix in the future-state design — embedding modifier lookup directly in the RCM platform review screen — is not a configuration change. It requires the vendor to build a feature. The prompt assumes it's in scope because it stays within the API display layer. A PM knows that "technically in scope" and "vendor will prioritize this" are two different conversations, and only one of them shows up in an output document.
 
-**The duplicate EMR entry exception is still 200+ open questions.** The SOP resolves the ambiguity with an instruction: ask your billing coordinator once, then follow that rule. Correct. But across 200+ partner sites, that's 200+ site-level rules that someone has to surface, validate, and codify before the SOP can be applied consistently. The AI documented the exception protocol. The PM has to execute it.
+**The duplicate EMR entry exception is still 200+ open questions.** The SOP resolves the ambiguity with an instruction: ask your billing coordinator once, then follow that rule. All technically correct. But across 200+ partner sites, that's 200+ site-level rules that someone has to surface, validate, and codify before the SOP can be applied consistently. The AI documented the exception protocol. The PM has to execute it.
 
 **Archetype 5 is an adoption problem, not a training problem.** The framing of "resistant clinician" is misleading — skepticism of clinical technology claims is the professional default for experienced hospitalists, not a personality trait of a difficult minority. Eighteen years of EMR implementations that promised efficiency and delivered documentation burden earns that skepticism. A rollout designed for willing adopters with a special-handling track for resistant ones will fail at scale, because it has the ratio backwards.
 
@@ -87,7 +87,7 @@ Three implementation problems the output doesn't address:
 
 **On the duplicate EMR entry inventory:** This is a PM-owned data collection task, not a site-by-site project. Work through the billing coordinator network — one communication to billing leads at all partner sites, asking for a single yes/no response on whether their site requires duplicate EMR logging. Set a 30-day deadline. Codify the responses into a site rules table that lives alongside the SOP. This converts 200+ ambiguous situations into one document that every clinician can look up.
 
-**On adoption:** The adoption strategy has to be built for skeptics, because skeptics are the norm. Eighteen years of EMR implementations that promised efficiency and delivered documentation burden is the starting position of most experienced clinicians — not an outlier. Identify two or three high-volume, respected hospitalists per region who are willing to run the new workflow and report their actual numbers. Give skeptics something to evaluate, not something to comply with. Peer reference over institutional mandate, demonstrated time data over projected time data, and an explicit acknowledgment that the old process was faster until the new one is proven faster in practice.
+**On adoption:** The adoption strategy has to be built for skeptics, because skeptics are the norm. Eighteen years of EMR implementations that promised efficiency and delivered documentation burden is the starting position of most experienced clinicians — not an outlier. Identify two or three high-volume, respected hospitalists per region who are willing to run the new workflow and report their actual numbers - and if possible, provide training, perhaps by video documentation. Give skeptics something to evaluate, not something to comply with. Peer reference over institutional mandate, demonstrated time data over projected time data, and an explicit acknowledgment that the old process was faster until the new one is proven faster in practice.
 
 The prompt built the map. These three actions are how the PM gets 2,000 clinicians to use it.
 
