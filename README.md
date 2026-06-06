@@ -21,7 +21,7 @@ The AI-assisted RCM platform successfully handles 85% of clinical charge entries
 
 **This is not a technology problem. The technology works. This is a process problem.** And process problems require a different toolkit than product roadmaps.
 
-This project documents an AI-assisted Lean DMAIC analysis of the manual charge entry workflow — from current-state mapping through future-state SOP generation — grounded in real operational constraints of a distributed clinical workforce.
+This project documents an AI-assisted Lean DMAIC analysis of the manual charge entry workflow, from current-state mapping through future-state SOP generation, grounded in real operational constraints of a distributed clinical workforce.
 
 ---
 
@@ -42,13 +42,13 @@ This project documents an AI-assisted Lean DMAIC analysis of the manual charge e
 Three structured inputs feed the AI analysis engine. See the `/data` folder for full source files.
 
 ### Current-State Workflow
-A step-by-step documentation of the current manual charge entry process — 14 steps from clinical event to charge submission, including the four decision points where clinicians improvise and the system handoffs that generate the most friction and error.
+A step-by-step documentation of the current manual charge entry process: 14 steps from clinical event to charge submission, including the four decision points where clinicians improvise and the system handoffs that generate the most friction and error.
 
 ### Friction Inventory
-Structured feedback across five clinician archetypes, each representing a distinct site profile and experience level. Each archetype carries specific complaints pre-mapped to Lean waste categories — simulating structured discovery data a PM would collect through site visits and interviews.
+Structured feedback across five clinician archetypes, each representing a distinct site profile and experience level. Each archetype carries specific complaints pre-mapped to Lean waste categories, simulating structured discovery data a PM would collect through site visits and interviews.
 
 ### Process Constraints
-Eight hard guardrails defining what the redesigned workflow can and cannot do — including the 2-click friction cap inherited from Project Horizon, EMR neutrality requirements (Epic and Cerner must work identically), a zero-training-budget change management constraint, and clinical safety non-negotiables for high-risk obstetric cases.
+Eight hard guardrails defining what the redesigned workflow can and cannot do, including the 2-click friction cap inherited from Project Horizon, EMR neutrality requirements (Epic and Cerner must work identically), a zero-training-budget change management constraint, and clinical safety non-negotiables for high-risk obstetric cases.
 
 ---
 
@@ -87,7 +87,7 @@ Critically: the prompt cannot propose a future state until the waste analysis is
 | Avg time per case | 8.4 min | 3.1 min | −63% |
 | Projected modifier error rate | 22% | ~8% | −64% |
 
-> **How the 2-click cap was honored:** The future-state workflow eliminates 6 steps entirely (Steps 03, 05, 07, 10, 11, 13 in current state). The 2 remaining non-value-added steps (notification acknowledgment and audit record confirmation) are retained because they satisfy the compliance audit trail constraint — not despite it.
+> **How the 2-click cap was honored:** The future-state workflow eliminates 6 steps entirely (Steps 03, 05, 07, 10, 11, 13 in current state). The 2 remaining non-value-added steps (notification acknowledgment and audit record confirmation) are retained because they satisfy the compliance audit trail constraint, not despite it.
 
 ---
 
@@ -126,7 +126,7 @@ project-clarity/
 
 ## ✅ Project Manager Methodology Intervention
 
-I have built a constraint into the prompt that prevents the AI from proposing a future state until the waste analysis is complete. I have designed a guardrail into the system: the AI can't skip the diagnostic step because the methodology requires diagnosis before solution.
+I have built a constraint/guardrail into the prompt that prevents the AI from proposing a future state until the waste analysis is complete: the AI can't skip the diagnostic step because the methodology requires diagnosis before solution.
 
 ## 🔗 Portfolio Navigation
 
