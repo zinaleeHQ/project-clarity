@@ -15,7 +15,7 @@
 
 ## 📋 The Operational Challenge
 
-Project Horizon identified three sprint-ready epics for a multi-site healthcare enterprise. Epic 2 — Clinician Workflow Optimization — earned its sprint slot through WSJF scoring. Now the harder question: what does optimization actually look like when 2,000+ clinicians across 200+ sites have each invented their own workaround?
+Project Horizon identified three sprint-ready epics for a multi-site healthcare enterprise. Epic 2: Clinician Workflow Optimization earned its sprint slot through WSJF scoring. Now the harder question: what does optimization actually look like when 2,000+ clinicians across 200+ sites have each invented their own workaround?
 
 The AI-assisted RCM platform successfully handles 85% of clinical charge entries. The remaining 15% require manual clinician intervention — but no standardized process exists for handling these cases. Every site has improvised. The result is inconsistent documentation, delayed claim submissions, a rising modifier error rate, and mounting clinician frustration with a platform that was supposed to reduce their administrative burden.
 
@@ -42,13 +42,13 @@ This project documents an AI-assisted Lean DMAIC analysis of the manual charge e
 Three structured inputs feed the AI analysis engine. See the `/data` folder for full source files.
 
 ### Current-State Workflow
-A step-by-step documentation of the current manual charge entry process: 14 steps from clinical event to charge submission, including the four decision points where clinicians improvise and the system handoffs that generate the most friction and error.
+A step-by-step documentation of the current manual charge entry process: 14 steps from clinical event to charge submission, including the four decision points where clinicians and their staff improvise and the system handoffs that generate the most friction and error.
 
 ### Friction Inventory
 Structured feedback across five clinician archetypes, each representing a distinct site profile and experience level. Each archetype carries specific complaints pre-mapped to Lean waste categories, simulating structured discovery data a PM would collect through site visits and interviews.
 
 ### Process Constraints
-Eight hard guardrails defining what the redesigned workflow can and cannot do, including the 2-click friction cap inherited from Project Horizon, EMR neutrality requirements (Epic and Cerner must work identically), a zero-training-budget change management constraint, and clinical safety non-negotiables for high-risk obstetric cases.
+Eight hard guardrails defining what the redesigned workflow can and cannot do, including the 2-click friction cap inherited from Project Horizon, EMR neutrality requirements (for instance: Epic and Cerner must work identically), a zero-training-budget change management constraint, and clinical safety non-negotiables for high-risk cases.
 
 ---
 
