@@ -22,7 +22,7 @@ I could have built a simple before/after swimlane diagram. It would have been fa
 
 **1. It's a complete problem-solving structure, not just a documentation exercise.** A swimlane shows what the process looks like. DMAIC forces you to measure it, analyze root causes, design the improvement, AND design how you sustain it. The Control phase — the rollout plan — is where most process improvement projects fail. Including it here shows I know where the work actually ends.
 
-**2. DMAIC aligns with the preferred qualifications in the target job description.** Lean Six Sigma is explicitly listed. Using DMAIC in a portfolio artifact signals methodology fluency in a way that a certification bullet point on a resume cannot.
+**2. DMAIC aligns with the preferred qualifications in the model we wrote.** Using DMAIC in a portfolio artifact signals methodology fluency in a way that a certification bullet point on a resume cannot.
 
 ### Why the Constraint-First Approach (Again)
 
