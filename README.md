@@ -149,6 +149,7 @@ Each prompt pauses at a PM judgment checkpoint before the final phase. Answer "y
 
 ## 🔗 Portfolio Navigation
 
+This is **Prompt 2 of 4** in a connected PM portfolio. The four projects tell a single end-to-end story:
 | Project | Question Answered | Methodology |
 |---|---|---|
 | [Project Horizon](https://github.com/zinaleeHQ/project-horizon) | What do we build and when? | SAFe · WSJF |
