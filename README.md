@@ -1,11 +1,12 @@
 # Project Clarity: Clinical Workflow Optimization Blueprint
-> **What this project is about, in plain language:**
->
-> This project standardizes a workflow that 2,000+ clinicians were doing differently at every site — some well, most inconsistently, none documented. An AI tool analyzed the friction, classified the waste, and generated a future-state procedure. The PM's job is to recognize that a technically correct procedure doesn't deploy itself — and to define the three actions required to actually get 2,000 skeptical, experienced clinicians to use it.
->
-> ***For the quickest look at how I work***, check out [the PROCESS page for Clarity](https://github.com/zinaleeHQ/project-clarity/blob/main/PROCESS.md).
 
+**An AI-designed workflow cut time-on-task by 63% and would still have failed at scale — because its single biggest improvement depended on a vendor building a feature that doesn't exist yet, and nobody had started that conversation.**
 
+That's the gap this project is actually about. Project Horizon decided *what* to build and *when*. This one asks a harder question: once you've decided to fix a workflow, how do you get 2,000 skeptical, experienced clinicians across 200 sites to actually use the fix — especially when the cleanest part of the redesign isn't something you control?
+
+The scenario: an AI-assisted billing platform handles 85% of charge entries correctly. The other 15% require manual clinician intervention, and every site has quietly invented its own workaround for it — no shared process, inconsistent documentation, a rising modifier error rate, and mounting frustration with a tool that was supposed to reduce paperwork, not add a second undocumented job on top of it.
+
+**[→ See the rest of the judgment calls in PROCESS.md](https://github.com/zinaleeHQ/project-clarity/blob/main/PROCESS.md)** — same kind of thinking, more of it, including why "resistant clinician" is the wrong way to describe the actual adoption problem.
 
 > **Standardizing AI-Assisted Charge Entry Across a Distributed Healthcare Workforce**
 
@@ -15,73 +16,63 @@
 
 ---
 
-## 📋 The Operational Challenge
+## ∴︎ Why This Matters Outside of Tech
 
-Project Horizon identified three sprint-ready epics for a multi-site healthcare enterprise. Epic 2: Clinician Workflow Optimization earned its sprint slot through WSJF scoring. Now the harder question: what does optimization actually look like when 2,000+ clinicians across 200+ sites have each invented their own workaround?
+Every distributed organization has a version of this problem: a central system works well most of the time, and the exceptions get handled by whoever's on shift, improvised, undocumented, different at every location. A retail chain calls it "how the Tuesday manager does returns versus the Friday one." A law firm calls it "how each paralegal formats a filing when the template doesn't quite fit." Healthcare calls it a charge entry workaround. Same structural problem, different letterhead.
 
-The AI-assisted RCM platform successfully handles 85% of clinical charge entries. The remaining 15% require manual clinician intervention — but no standardized process exists for handling these cases. Every site has improvised. The result is inconsistent documentation, delayed claim submissions, a rising modifier error rate, and mounting clinician frustration with a platform that was supposed to reduce their administrative burden.
+What's underneath this project is a discipline built specifically for that gap — Lean process improvement, using a structure called DMAIC (Define, Measure, Analyze, Improve, Control) to make sure a fix actually gets diagnosed before it gets designed, and actually gets *sustained* after it ships instead of quietly reverting to the old workaround within a month. That last part is the piece most process fixes skip, and it's usually why they don't stick.
 
-**This is not a technology problem. The technology works. This is a process problem.** And process problems require a different toolkit than product roadmaps.
-
-This project documents an AI-assisted Lean DMAIC analysis of the manual charge entry workflow, from current-state mapping through future-state SOP generation, grounded in real operational constraints of a distributed clinical workforce.
+The technical scenario below is healthcare-specific. The underlying skill — separating "the technology is broken" from "the technology works fine but nobody standardized what happens at the edges" — is the same instinct a firm's operations lead needs when every paralegal's workaround has quietly become five different processes wearing one name.
 
 ---
 
-## 🔍 The DMAIC Framework Applied
+## The Operational Challenge
+
+Horizon scored Clinician Workflow Optimization as a sprint-ready epic. This project is what "optimization" actually meant once the sprint started: 2,000+ clinicians, 200+ sites, and the 15% of charge entries the AI platform can't handle cleanly on its own — each site having quietly built its own answer to what happens next.
+
+The technology isn't the problem here. It works. What's missing is standardization, and that's a different toolkit than a product roadmap — this project documents an AI-assisted Lean DMAIC analysis of the manual charge entry workflow, from current-state mapping through a deployable future-state procedure, built against the real operational constraints of a workforce that can't be pulled into a training room.
 
 | Phase | Question | Portfolio Artifact |
 |---|---|---|
-| **Define** | What is the problem and who does it affect? | Friction inventory · 5 clinician archetypes |
-| **Measure** | Where exactly is the time and waste? | Current-state workflow · 14-step time-on-task map |
-| **Analyze** | What are the root causes? | Lean 8 Wastes classification table |
-| **Improve** | What does the optimized process look like? | Future-state SOP · Embedded decision tree |
-| **Control** | How do we sustain the improvement? | Phased rollout plan · Adoption metrics framework |
+| **Define** | What is the problem, and who does it affect? | Friction inventory · 5 clinician archetypes |
+| **Measure** | Where exactly is the time and waste going? | Current-state workflow · 14-step time-on-task map |
+| **Analyze** | What's actually causing it? | Lean 8 Wastes classification |
+| **Improve** | What does the fixed process look like? | Future-state SOP · embedded decision tree |
+| **Control** | How does the improvement survive contact with 200 sites? | Phased rollout plan · adoption metrics |
 
 ---
 
-## 📥 The Data Inputs
+## ⎔︎ What Had to Be True Before Any Redesign Started
 
-Three structured inputs feed the AI analysis engine. See the `/data` folder for full source files.
+Three inputs shaped this analysis, and none of them look alike, which is deliberate — a friction inventory built from five uniform profiles would have missed the actual problem.
 
-### Current-State Workflow
-A step-by-step documentation of the current manual charge entry process: 14 steps from clinical event to charge submission, including the four decision points where clinicians and their staff improvise and the system handoffs that generate the most friction and error.
+The current-state workflow is a 14-step map of the manual charge entry process, timed step by step, including the four points where clinicians and their staff are currently improvising and the handoffs generating the most error.
 
-### Friction Inventory
-Structured feedback across five clinician archetypes, each representing a distinct site profile and experience level. Each archetype carries specific complaints pre-mapped to Lean waste categories, simulating structured discovery data a PM would collect through site visits and interviews.
+The friction inventory is where it gets specific: five clinician archetypes, not one generic "clinician" persona, because a high-volume urban hospitalist and a rural provider covering three sites for one weekend a month have almost nothing in common in terms of workflow pressure — and an 18-year veteran's skepticism doesn't look anything like a new hire's confusion. Designing for the median across those five means designing for none of them particularly well.
 
-### Process Constraints
-Eight hard guardrails defining what the redesigned workflow can and cannot do, including the 2-click friction cap inherited from Project Horizon, EMR neutrality requirements (for instance: Epic and Cerner must work identically), a zero-training-budget change management constraint, and clinical safety non-negotiables for high-risk cases.
+And eight process constraints govern what the redesign is allowed to do at all — a 2-click friction cap inherited from Horizon, EMR neutrality (Epic and Cerner have to work identically, not "close enough"), a genuinely hard zero-training-budget rule, and non-negotiable safety rules for high-risk cases. That training-budget constraint turned out to matter more than any other single design principle: you cannot deliver live training to 2,000 people across 200 sites, so every fix has to be self-evident from the workflow itself, or it doesn't survive contact with reality.
 
 ---
 
-## 🤖 The AI Analysis Engine
+## ⚙︎ How the Analysis Engine Works
 
-The prompt in `/prompts/process-analysis-prompt.md` performs four sequential operations:
+The prompt (`/prompts/process-analysis-prompt.md`) can't propose a future-state workflow until the waste classification is fully done — that ordering is deliberate, and it's the same principle Horizon used for constraint filtering. The most common failure in process redesign is jumping straight to a fix before diagnosing the actual cause, and you end up with a workflow that *looks* cleaner without addressing what was actually driving the waste.
 
-1. **Waste classification** — Maps every identified friction point to the Lean 8 Wastes framework before any redesign work begins
-2. **Root cause analysis** — Identifies the structural causes of waste clusters, not just surface symptoms
-3. **Future-state design** — Generates an optimized workflow that eliminates non-value-added steps while satisfying every process constraint
-4. **SOP generation** — Produces a deployment-ready Standard Operating Procedure with embedded decision logic and exception handling for edge cases
-
-Critically: the prompt cannot propose a future state until the waste analysis is complete. This enforces the Lean principle of diagnosing before solving.
+Here's a concrete version of that trap: the obvious fix for the modifier code lookup problem (2.4 minutes per case, on average) is embedding a reference list directly in the platform screen. But the waste analysis surfaces something the obvious fix misses — the real issue isn't a missing reference, it's that clinicians don't trust the platform's AI-suggested code enough to accept it without checking it themselves. A reference list doesn't fix a trust problem. A visible confidence score does. You only get to that answer by doing the diagnosis first, not by skipping to the fix that looks right.
 
 ---
 
-## 📊 The Output: Before & After
-
-### Waste Picture (Current State)
+## The Output: Before and After
 
 | Waste Type | Current-State Impact | Frequency |
 |---|---|---|
-| **Waiting** | Avg 2.4 min per case searching for correct modifier reference | Every manual case |
+| **Waiting** | Avg 2.4 min per case searching for the correct modifier | Every manual case |
 | **Motion** | Avg 1.8 min navigating between 3 system screens | Every manual case |
-| **Defects** | 22% of manual cases result in incorrect modifier → claim rejection | Every 5th case |
-| **Extra Processing** | Duplicate data entry in both RCM platform and EMR | 60% of cases |
-| **Non-Utilized Talent** | Skilled clinicians performing low-value administrative navigation | Every manual case |
+| **Defects** | 22% of manual cases end in an incorrect modifier → claim rejection | Every 5th case |
+| **Extra Processing** | Duplicate entry across both the platform and the EMR | 60% of cases |
+| **Non-Utilized Talent** | Skilled clinicians doing low-value administrative navigation | Every manual case |
 
-### Value Stream Comparison
-
-| Metric | Current State | Future State | Improvement |
+| Metric | Current State | Future State | Change |
 |---|---|---|---|
 | Steps in workflow | 14 | 8 | −43% |
 | Decision points requiring navigation | 4 | 1 | −75% |
@@ -89,11 +80,21 @@ Critically: the prompt cannot propose a future state until the waste analysis is
 | Avg time per case | 8.4 min | 3.1 min | −63% |
 | Projected modifier error rate | 22% | ~8% | −64% |
 
-> **How the 2-click cap was honored:** The future-state workflow eliminates 6 steps entirely (Steps 03, 05, 07, 10, 11, 13 in current state). The 2 remaining non-value-added steps (notification acknowledgment and audit record confirmation) are retained because they satisfy the compliance audit trail constraint, not despite it.
+The 2-click cap held throughout — six steps got eliminated outright, and the two that remain (notification acknowledgment, audit record confirmation) stayed specifically *because* they satisfy the compliance audit trail requirement, not in spite of it.
 
 ---
 
-## 📁 Repository Contents
+## Where PM Judgment Actually Had to Show Up
+
+The prompt ran clean. Every constraint passed, the waste classification held up against the mock, and the future-state SOP is technically deployable exactly as written. If the only question were "does the prompt work," the answer's yes — but that's not actually the question that matters.
+
+The single highest-leverage fix in the whole redesign — embedding the modifier reference directly in the review screen — isn't a configuration change a PM can just approve. It requires the vendor to build a feature that doesn't currently exist. The prompt treats it as in-scope because it technically stays within the API display layer, and on paper, that's true. But "technically in scope" and "the vendor will actually prioritize this" are two completely different conversations, and only one of them shows up in an output document. Before this SOP gets published as deployed, it needs a real ROI case attached — time saved × case volume × clinician cost per minute — submitted as a formal feature request, with a timeline commitment attached, not a hope. An SOP that depends on a feature that doesn't exist is a roadmap item wearing a deployment document's clothes.
+
+Two smaller gaps are worth naming here too, though they get fuller treatment in PROCESS.md: the duplicate-EMR-entry exception resolves cleanly on paper but actually creates 200+ site-level rules someone still has to go collect and codify, and the archetype the output labels "resistant" isn't really resistant — it's rational skepticism from clinicians who've watched EMR promises break before, and a rollout built for willing adopters with a special track for skeptics has the ratio backwards.
+
+---
+
+## ↳︎ Repository Contents
 
 ```
 project-clarity/
@@ -114,46 +115,28 @@ project-clarity/
 
 ---
 
-## ✅ Project Manager Requirements
-
-| Requirement | How This Project Demonstrates It |
-|---|---|
-| *“Analyze current-state workflows and identify opportunities for efficiency gains”* | 14-step current-state map with time-on-task data and Lean waste classification |
-| *“Design and implement optimized workflows that improve scalability and user experience”* | Future-state SOP with 43% step reduction, EMR-neutral design, and embedded decision logic |
-| *“Create and maintain process documentation, SOPs, workflow diagrams, and governance standards”* | Deployment-ready SOP with version control header, exception protocols, and compliance audit trail |
-| *“Lead continuous improvement initiatives using structured process improvement methodologies”* | Full DMAIC framework applied end-to-end with measurable before/after outcome targets |
-| *“Conduct root-cause analysis and recommend data-driven solutions”* | Lean 8-wastes root cause analysis drives every redesign decision |
-
+The constraint enforcement is worth naming directly here, since it's easy to miss in a repo listing: the prompt is structurally unable to skip diagnosis and jump to a fix. Waste classification has to complete before future-state design even starts. That's not a nice-to-have — it's the whole methodology, built into the architecture instead of left as a step someone could rush past under deadline pressure.
 
 ---
 
+## Try This Yourself
 
-## ✅ Project Manager Methodology Intervention
-
-I have built a constraint/guardrail into the prompt that prevents the AI from proposing a future state until the waste analysis is complete: the AI can't skip the diagnostic step because the methodology requires diagnosis before solution.
-
-
----
-
-
-## 🚀 Want to Try This Yourself?
-
-This project has a live HTML page with a one-click **Copy Prompt** button that copies the complete prompt for you, including data. Paste/Ctrl-V into Claude, GPT-4, or Gemini — no setup required.
+There's a live page with a one-click **Copy Prompt** button — grabs the full prompt plus data, ready to paste into Claude, GPT-4, or Gemini.
 
 👉 [Open Project Clarity Prompt Copy page](https://zinaleeHQ.github.io/project-clarity/)
 
-Each prompt pauses at a PM judgment checkpoint before the final phase. Answer "yes" when you are ready to move forward. (That pause is the point.)
-
+It pauses at a judgment checkpoint before the final phase, same as the others. That pause is the point.
 
 ---
 
-## 🔗 Portfolio Navigation
+## ↳︎ Portfolio Navigation
 
-This is **Prompt 2 of 4** in a connected PM portfolio. The four projects tell a single end-to-end story:
+Project 2 of 4. Together, four projects tell one story.
+
 | Project | Question Answered | Methodology |
 |---|---|---|
-| [Project Horizon](https://github.com/zinaleeHQ/project-horizon) | What do we build and when? | SAFe · WSJF |
-| **Project Clarity** (this repo) | How do we change how people work? | Lean · DMAIC |
+| [Project Horizon](https://github.com/zinaleeHQ/project-horizon) | What do we build, and when? | SAFe · WSJF |
+| **Project Clarity** (this repo) | How do we change how people actually work? | Lean · DMAIC |
 | [Project Signal](https://github.com/zinaleeHQ/project-signal) | How do we keep every stakeholder aligned? | Stakeholder Intelligence · Audience Mapping |
 | [Project Vista](https://github.com/zinaleeHQ/project-vista) | How do we give every stakeholder self-service visibility? | KPI Governance · Data Architecture |
 
@@ -161,4 +144,7 @@ This is **Prompt 2 of 4** in a connected PM portfolio. The four projects tell a 
 
 ---
 
-*Portfolio case studies · All scenario details constructed from publicly available information · No proprietary data from any organization has been used · Built June 2026*
+*Portfolio case study · Built from publicly available information · No proprietary data used · June 2026*
+
+---
+
