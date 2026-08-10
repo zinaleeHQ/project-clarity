@@ -28,7 +28,7 @@ The training-budget constraint ended up mattering more than any of the others. Y
 
 ### Why Five Archetypes, Not One Generic Clinician
 
-Process improvement fails reliably when it's designed for the average user and then deployed to everyone. A high-volume urban academic hospitalist and a rural provider covering three sites for one weekend a month are dealing with fundamentally different pressures. An 18-year veteran's failure modes don't look anything like a new hire's.
+A high-volume urban academic hospitalist and a rural provider covering three sites for one weekend a month are dealing with fundamentally different pressures. And a veteran's failure mode isn't confusion — it's calculated distrust, earned across two decades of EHR vendors promising 'less work, less clicks' and delivering neither. That's a different problem to design for than a new hire who just doesn't know the workflow yet.
 
 Building five distinct archetypes before running the analysis forces a specific, uncomfortable question at every step: does this fix actually work for all five, or just for whoever sits at the median? A redesign that satisfies three archetypes out of five isn't 60% done. It's a fix with a predictable adoption failure rate baked into the two sites that don't fit the profile it was built around.
 
