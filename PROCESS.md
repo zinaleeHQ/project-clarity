@@ -18,7 +18,7 @@ If you haven't read [the README](./README.md) yet, start there. This page goes d
 
 ### Why DMAIC Over a Simple Before/After Map
 
-A swimlane diagram would have been faster to build and more immediately readable. I chose DMAIC instead because it's a complete problem-solving structure, not just a documentation exercise — a swimlane shows you what the process looks like, but DMAIC forces you to measure it, diagnose the actual root cause, design the fix, and then design how the fix survives contact with reality. That last part, the Control phase, is where most process improvement work quietly dies, and including it here is the point, not an afterthought. It also happens to align closely with language a lot of process-improvement job postings already use — not the reason I chose it, but a fair side benefit of choosing the more rigorous option anyway.
+A swimlane diagram would have been faster to build and more immediately readable. I chose DMAIC (Define, Measure, Analyze, Improve, Control) instead because it's a complete problem-solving structure, not just a documentation exercise — a swimlane shows you what the process looks like, but DMAIC forces you to measure it, diagnose the actual root cause, design the fix, and then design how the fix survives contact with reality. That last part, the Control phase, is where most process improvement work quietly dies, and including it here is the point, not an afterthought. It also happens to align closely with language a lot of process-improvement job postings already use — not the reason I chose it, but a fair side benefit of choosing the more rigorous option anyway.
 
 ### Why the Constraints Came Before the Prompt, Again
 
