@@ -125,7 +125,7 @@ The constraint enforcement is worth naming directly here, since it's easy to mis
 
 There's a live page with a one-click **Copy Prompt** button — grabs the full prompt plus data, ready to paste into Claude, GPT-4, or Gemini.
 
-👉 [Open Project Clarity Prompt Copy page](https://zinaleeHQ.github.io/project-clarity/)
+›︎ [Open Project Clarity Prompt Copy page](https://zinaleeHQ.github.io/project-clarity/)
 
 It pauses at a judgment checkpoint before the final phase, same as the others. That pause is the point.
 
