@@ -2,7 +2,7 @@
 
 **An AI-designed workflow cut time-on-task by 63% and would still have failed at scale — because its single biggest improvement depended on a vendor building a feature that doesn't exist yet, and nobody had started that conversation.**
 
-That's the gap this project is actually about. Project Horizon decided *what* to build and *when*. This one asks a harder question: once you've decided to fix a workflow, how do you get 2,000 skeptical, experienced clinicians across 200 sites to actually use the fix — especially when the cleanest part of the redesign isn't something you control?
+This is the gap this project is actually about. Project Horizon decided *what* to build and *when*. This one asks a harder question: once you've decided to fix a workflow, how do you get 2,000 skeptical, experienced clinicians across 200 sites to actually use the fix — especially when the cleanest part of the redesign isn't something you control?
 
 The scenario: an AI-assisted billing platform handles 85% of charge entries correctly. The other 15% require manual clinician intervention, and every site has quietly invented its own workaround for it — no shared process, inconsistent documentation, a rising modifier error rate, and mounting frustration with a tool that was supposed to reduce paperwork, not add a second undocumented job on top of it.
 
@@ -22,7 +22,7 @@ Every distributed organization has a version of this problem: a central system w
 
 What's underneath this project is a discipline built specifically for that gap — Lean process improvement, using a structure called DMAIC (Define, Measure, Analyze, Improve, Control) to make sure a fix actually gets diagnosed before it gets designed, and actually gets *sustained* after it ships instead of quietly reverting to the old workaround within a month. That last part is the piece most process fixes skip, and it's usually why they don't stick.
 
-The technical scenario below is healthcare-specific. The underlying skill — separating "the technology is broken" from "the technology works fine but nobody standardized what happens at the edges" — is the same instinct a firm's operations lead needs when every paralegal's workaround has quietly become five different processes wearing one name.
+The technical scenario below is healthcare-specific. The underlying skill — separating "the technology is broken" from "the technology works fine but nobody standardized what happens at the edges" — is the same skill a legal firm's operations lead needs when every paralegal's workaround has become five different processes lumped under one name.
 
 ---
 
