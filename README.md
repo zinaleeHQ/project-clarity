@@ -58,7 +58,7 @@ And eight process constraints govern what the redesign is allowed to do at all �
 
 The prompt (`/prompts/process-analysis-prompt.md`) can't propose a future-state workflow until the waste classification is fully done — that ordering is deliberate, and it's the same principle Horizon used for constraint filtering. The most common failure in process redesign is jumping straight to a fix before diagnosing the actual cause, and you end up with a workflow that *looks* cleaner without addressing what was actually driving the waste.
 
-Here's a concrete version of that trap: the obvious fix for the modifier code lookup problem (2.4 minutes per case, on average) is embedding a reference list directly in the platform screen. But the waste analysis surfaces something the obvious fix misses — the real issue isn't a missing reference, it's that clinicians don't trust the platform's AI-suggested code enough to accept it without checking it themselves. A reference list doesn't fix a trust problem. A visible confidence score does. You only get to that answer by doing the diagnosis first, not by skipping to the fix that looks right.
+Here's a concrete version of that trap: the obvious fix for the modifier code lookup problem (2.4 minutes per case, on average) is embedding a reference list directly in the platform screen. But the waste analysis surfaces something the obvious fix misses — the real issue isn't a missing reference, it's that clinicians don't trust the platform's AI-suggested code enough to accept it without checking it themselves. A reference list doesn't fix a trust problem. A visible confidence score does. You get to that answer by doing the diagnosis first, not by skipping to the fix that looks or feels right.
 
 ---
 
@@ -92,7 +92,7 @@ The single highest-leverage fix in the whole redesign — embedding the modifier
 
 The prompt treats it as in-scope because it technically stays within the API display layer, and, on paper, that's true. But "technically in scope" and "the vendor will actually prioritize this" are two completely different conversations, and only one of them shows up in an output document. Before this SOP gets published as deployed, it needs a real ROI case attached — time saved × case volume × clinician cost per minute — submitted as a formal feature request, with a timeline commitment attached, not a hope. An SOP that depends on a feature that doesn't exist is a roadmap item that's disguised as a deployment document.
 
-Two smaller gaps are worth naming here too, though they get fuller treatment in PROCESS.md: the duplicate-EMR-entry exception resolves on paper but actually creates 200+ site-level rules someone still has to go collect and codify, and the archetype the output labels "resistant" isn't really resistant — it's rational skepticism from clinicians who've watched EMR promises break before, and a rollout built for willing adopters with a special track for skeptics has that ratio backwards.
+Two smaller gaps are worth naming here too, though they get fuller treatment in PROCESS.md: the duplicate-EMR-entry exception resolves on paper but actually creates 200+ site-level rules someone still has to go collect and codify, and the archetype that the output labels "resistant" isn't really resistant — it's rational skepticism from clinicians who've watched EMR promises break before, and a rollout built for willing adopters with a special track for skeptics has that exactly backwards.
 
 ---
 
@@ -117,7 +117,7 @@ project-clarity/
 
 ---
 
-The constraint enforcement is worth naming here, since it's easy to miss in a repo listing: the prompt is structurally unable to skip diagnosis and jump to a fix. Waste classification has to complete before future-state design even starts. That's not a nice-to-have — it's the whole methodology, built into the architecture instead of being as a step someone could rush past under deadline pressure.
+The constraint enforcement is worth naming here, since it's easy to miss in a repo listing: the prompt is structurally unable to skip diagnosis and jump to a fix. Waste classification has to complete before future-state design even starts. That's not a nice-to-have — it's the whole methodology, built into the architecture instead of being a step someone could rush past under deadline pressure.
 
 ---
 
@@ -127,7 +127,7 @@ There's a live page with a one-click **Copy Prompt** button — grabs the full p
 
 ›︎ [Open Project Clarity Prompt Copy page](https://zinaleeHQ.github.io/project-clarity/)
 
-It pauses at a judgment checkpoint before the final phase, same as the others. That pause is the point.
+It pauses at a judgment checkpoint before the final phase, same as the others. This pause is the actual point.
 
 ---
 
