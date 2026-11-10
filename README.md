@@ -86,13 +86,13 @@ The 2-click cap held throughout — six steps got eliminated outright, and the t
 
 ## Where PM Judgment Actually Had to Show Up
 
-The prompt ran clean. Every constraint passed, the waste classification held up against the mock, and the future-state SOP is technically deployable exactly as written. If the only question were "does the prompt work," the answer's yes — but that's not actually the question that matters.
+The prompt ran clean. Every constraint passed, the waste classification held up against the mock, and the future-state SOP is technically deployable exactly as written. If the only question was "does the prompt work," the answer's yes — but that's not actually the main question.
 
 The single highest-leverage fix in the whole redesign — embedding the modifier reference directly in the review screen — isn't a configuration change a PM can just approve. **It requires the vendor to build a feature that doesn't exist on the roadmap.** (Cue the endless negotiation cycle.) 
 
-The prompt treats it as in-scope because it technically stays within the API display layer, and on paper, that's true. But "technically in scope" and "the vendor will actually prioritize this" are two completely different conversations, and only one of them shows up in an output document. Before this SOP gets published as deployed, it needs a real ROI case attached — time saved × case volume × clinician cost per minute — submitted as a formal feature request, with a timeline commitment attached, not a hope. An SOP that depends on a feature that doesn't exist is a roadmap item wearing a deployment document's clothes.
+The prompt treats it as in-scope because it technically stays within the API display layer, and, on paper, that's true. But "technically in scope" and "the vendor will actually prioritize this" are two completely different conversations, and only one of them shows up in an output document. Before this SOP gets published as deployed, it needs a real ROI case attached — time saved × case volume × clinician cost per minute — submitted as a formal feature request, with a timeline commitment attached, not a hope. An SOP that depends on a feature that doesn't exist is a roadmap item that's disguised as a deployment document.
 
-Two smaller gaps are worth naming here too, though they get fuller treatment in PROCESS.md: the duplicate-EMR-entry exception resolves cleanly on paper but actually creates 200+ site-level rules someone still has to go collect and codify, and the archetype the output labels "resistant" isn't really resistant — it's rational skepticism from clinicians who've watched EMR promises break before, and a rollout built for willing adopters with a special track for skeptics has the ratio backwards.
+Two smaller gaps are worth naming here too, though they get fuller treatment in PROCESS.md: the duplicate-EMR-entry exception resolves on paper but actually creates 200+ site-level rules someone still has to go collect and codify, and the archetype the output labels "resistant" isn't really resistant — it's rational skepticism from clinicians who've watched EMR promises break before, and a rollout built for willing adopters with a special track for skeptics has that ratio backwards.
 
 ---
 
@@ -117,7 +117,7 @@ project-clarity/
 
 ---
 
-The constraint enforcement is worth naming directly here, since it's easy to miss in a repo listing: the prompt is structurally unable to skip diagnosis and jump to a fix. Waste classification has to complete before future-state design even starts. That's not a nice-to-have — it's the whole methodology, built into the architecture instead of left as a step someone could rush past under deadline pressure.
+The constraint enforcement is worth naming here, since it's easy to miss in a repo listing: the prompt is structurally unable to skip diagnosis and jump to a fix. Waste classification has to complete before future-state design even starts. That's not a nice-to-have — it's the whole methodology, built into the architecture instead of being as a step someone could rush past under deadline pressure.
 
 ---
 
